@@ -31,8 +31,7 @@ END
 
 
 DELIMITER // CREATE TRIGGER check_eredmeny_before_update beforeUPDATE on eredmenyek for each row BEGINIF new.helyezes NOT BETWEEN 1 
-AND 3 then 
-SET new.helyezes = old.helyezes;
+AND 3 
 ENDIF;
 END // delimiter;
 
